@@ -266,4 +266,4 @@ Where `CONTAINER` is the ID or the name of the container used during its
 creation (e.g. `crashplan-pro`).
 
 ## Sources
-The base of this image is forked from [jlesage's](https://github.com/jlesage) a template repository [docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui). Most of the content in this readme is also inspired by his work. Thanks for sharing that template!
+The base of this image is [jlesage's](https://github.com/jlesage) repository [docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui). Most of the content in this readme is also inspired by his work. Thanks for sharing a template to dockerize GUI apps!
