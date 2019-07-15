@@ -28,7 +28,7 @@ Calibre is a powerful and easy to use e-book manager.
          * [SSVNC](#ssvnc)
          * [VNC Password](#vnc-password)
       * [Shell Access](#shell-access)
-      * [Support or Contact](#support-or-contact)
+      * [Sources](#sources)
 
 ## Quick Start
 
