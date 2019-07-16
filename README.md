@@ -22,6 +22,7 @@ Calibre is a powerful and easy to use e-book manager.
          * [Ports](#ports)
          * [Changing Parameters of a Running Container](#changing-parameters-of-a-running-container)
       * [Docker Image Update](#docker-image-update)
+         * [unRAID](#unraid)
       * [User/Group IDs](#usergroup-ids)
       * [Accessing the GUI](#accessing-the-gui)
       * [Security](#security)
@@ -31,9 +32,12 @@ Calibre is a powerful and easy to use e-book manager.
       * [Sources](#sources)
 
 ## Quick Start
+If you want to run this container on unRAID, please follow instructions for installation using template [here](https://github.com/JiriS97/docker-templates).
 
 **NOTE**: The Docker command provided in this quick start is given as an example
 and parameters should be adjusted to your need.
+
+
 
 Launch the Calibre-gui container with the following command:
 ```
@@ -41,13 +45,13 @@ docker run -d \
     --name=calibre-gui \
     -p 5800:5800 \
     -p 8081:8081\
-    -v /docker/appdata/calibre-gui:/config:rw \
+    -v /mnt/cache/appdata/calibre-gui:/config:rw \
     -v $HOME:/storage:rw \
     jiris97/calibre-gui
 ```
 
 Where:
-  - `/docker/appdata/calibre-gui`: This is where the application stores its configuration, log and any files needing persistency.
+  - `/mnt/cache/appdata/calibre-gui`: This is where the application stores its configuration, log and any files needing persistency.
   - `$HOME`: This location contains your e-books library.
 
 Browse to `http://your-host-ip:5800` to access the Calibre GUI.
@@ -155,6 +159,14 @@ docker stop jiris97/calibre-gui
 docker rm jiris97/calibre-gui
 ```
   4. Start the container using the `docker run` command.
+
+### unRAID
+
+For unRAID, a container image can be updated by following these steps:
+
+  1. Select the *Docker* tab.
+  2. Click the *Check for Updates* button at the bottom of the page.
+  3. Click the *update ready* link of the container to be updated.
 
 ## User/Group IDs
 
