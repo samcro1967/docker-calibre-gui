@@ -46,7 +46,8 @@ docker run -d \
     -p 5800:5800 \
     -p 8081:8081\
     -v /mnt/cache/appdata/calibre-gui:/config:rw \
-    -v $HOME:/storage:rw \
+    -v $HOME/Library:/storage:rw \
+    -v $HOME/Downloads:/import:r \
     jiris97/calibre-gui
 ```
 
@@ -107,6 +108,7 @@ format: `<HOST_DIR>:<CONTAINER_DIR>[:PERMISSIONS]`.
 |-----------------|-------------|-------------|
 |`/config`| rw | This is where the application stores its configuration, log and any files needing persistency. |
 |`/storage`| rw | This location contains your e-books library. |
+|`/import`| r | This location is for importing e-book into the library. |
 
 ### Ports
 

@@ -46,5 +46,6 @@ RUN \
 
 # Port 8081 for Content server 
 VOLUME ["/config"]
+VOLUME ["/import"]
 VOLUME ["/storage"]
 EXPOSE 8081
